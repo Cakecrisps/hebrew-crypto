@@ -5,12 +5,13 @@ m = 36
 alf = digits + ascii_lowercase
 print(alf)
 def valid(c_type,key):
+    print(key)
     if c_type == 0 and len(key) != m:raise(ValueError(f"Ключ для простой замены должен содержать {m} значений"))
     if c_type != 0: 
         if len(key) != 2 and len(key)!= 4:raise(ValueError("Ключ для афиныых шифров должен быть длинной 2"))
         if not (str.isdigit(key[0]) and str.isdigit(key[1])): raise(ValueError("Ключи должны быть числами"))
-        if int(key[2]) == 0:raise(ValueError("a = 0"))
-        if math.gcd(int(key[2]),m) != 1:raise(ValueError(f"a1 должно быть взаимно простым с {m}"))
+        if int(key[0]) == 0:raise(ValueError("a = 0"))
+        if math.gcd(int(key[0]),m) != 1:raise(ValueError(f"a1 должно быть взаимно простым с {m}"))
     if c_type == 2:
         if len(key) != 4:raise(ValueError("должно быть 4 символа через пробел в ключе"))
         if key[2] == "0":raise(ValueError(f"a2 = 0"))
