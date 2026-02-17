@@ -20,6 +20,3 @@ def brute_recafin(text: str,m: int) -> None:
                         print(recafinn(1,[a1,b1,a2,b2],text),(a1,b1,a2,b2))
                     except:
                         pass
-
-
-
